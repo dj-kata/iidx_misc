@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# usage: ./*.py [json]
+# usage: ./*.py jsonfile
 
 import re, sys, json
 from datetime import datetime
@@ -8,8 +8,8 @@ header = "バージョン,タイトル,ジャンル,アーティスト,プレー
 dummy = '0,0,0,0,---,NO PLAY,---,'
 clear = ('FAILED','ASSIST CLEAR','EASY CLEAR','CLEAR','HARD CLEAR','EX HARD CLEAR','FULLCOMBO CLEAR')
 
-#dat = open(sys.argv[1]).readlines()[0]
-dat = open('bpim_sample.txt').readlines()[0]
+dat = open(sys.argv[1]).readlines()[0]
+#dat = open('bpim_sample.txt').readlines()[0]
 #dat = sys.argv[1]
 all = json.loads(dat)
 
